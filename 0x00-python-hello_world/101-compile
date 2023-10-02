@@ -1,20 +1,2 @@
-#!/usr/bin/python3
-import py_compile
-import os
-import sys
-
-# Check if PYFILE environment variable is set
-if 'PYFILE' not in os.environ:
-    sys.exit(1)
-
-# Get the Python filename from the environment variable
-pyfile = os.environ['PYFILE']
-
-# Compile the Python script
-try:
-    py_compile.compile(pyfile, cfile=pyfile + 'c', doraise=True)
-    print(f"Compiling {pyfile} ...")
-except py_compile.PyCompileError as e:
-    print(f"Compilation failed: {e}")
-    sys.exit(1)
-
+#!/bin/bash
+python3 -m compileall -b $PYFILE i
