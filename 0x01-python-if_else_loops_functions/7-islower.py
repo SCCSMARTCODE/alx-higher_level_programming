@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def islower(c):
     ch = 'a'
     while ch <= 'z':
