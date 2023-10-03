@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
 val = 0
-while val <= 99:
-    if val < 10 and val != 99:
-        print(f"0{val}", end=", ")
-    elif val > 9 and val != 99:
-        print(f"{val}", end = ", ")
-    else:
-        print(f"{val}")
+val1 = 0
+while val <= 9:
+    while val1 <= 9:
+        if val == val1 == 9:
+            print("{}{}".format(val, val1))
+        else:
+            print("{}{}".format(val, val1), end=", ")
+        val1 += 1
+    val1 = 0
     val += 1
