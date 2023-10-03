@@ -3,7 +3,7 @@
 val = 0
 if val == 0:
     while val <= 99:
-        if val <=9:
+        if val <= 9:
             pre = "0"
         else:
             pre = ""
