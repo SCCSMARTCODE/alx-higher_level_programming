@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def islower(c):
 
-    if c != str(c):
-        return Error 
+    if c != str(c)i or str(c) == 0:
+        return Error
     ch = 'a'
     while ch <= 'z':
         if c == ch:
