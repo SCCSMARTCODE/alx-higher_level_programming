@@ -6,5 +6,5 @@ def uppercase(str):
         if ch in str:
            str = str.replace(ch, chr(ord(ch) -32))
         ch = chr(ord(ch) + 1)
-    print(str)
+    print("{}".format(str))
     return 1
