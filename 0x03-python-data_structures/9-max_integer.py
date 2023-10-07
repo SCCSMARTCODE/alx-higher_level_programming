@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def max_integer(my_list=[]):
     if my_list == []:
         return None
@@ -7,4 +8,4 @@ def max_integer(my_list=[]):
     for x in my_list:
         if x > m_no:
             m_no = x
-    return(m_no)
+    return m_no
