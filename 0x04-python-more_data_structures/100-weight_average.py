@@ -2,7 +2,22 @@
 def weight_average(my_list=[]):
     if my_list == []:
         return 0
-    f_set = ((my_list[0][0] * my_list[0][1]) + (my_list[1][0] * my_list[1][1]))
-    s_set = ((my_list[2][0] * my_list[2][1]) + (my_list[3][0] * my_list[3][1]))
-    d_set = ((my_list[0][1] + my_list[1][1]) + (my_list[2][1] + my_list[3][1]))
-    return (f_set + s_set) / d_set
+    len_s = len(my_list)
+    x = 0
+    y = 0
+    t_sum = 0
+    d_sum = 0
+    while x < len_s:
+        mul = 1
+        y = 0
+        while y < 2:
+            mul *= my_list[x][y]
+            if y == 1:
+                d_sum += my_list[x][y]
+            y += 1
+        t_sum += mul
+        x += 1
+    if t_sum == 0:
+        return 0.0
+
+    return t_sum / d_sum
