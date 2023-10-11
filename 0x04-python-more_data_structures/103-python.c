@@ -1,4 +1,5 @@
 #define PY_SSIZE_T_CLEAN
+#include <stdio.h>
 #include <Python.h>
 
 /**
@@ -62,18 +63,3 @@ void print_python_list(PyObject *p) {
 			printf("%s\n", Py_TYPE(element)->tp_name);
 		}
 	}
-}
-
-/**
- * main - Entry point for the program.
- * @argc: The number of command-line arguments.
- * @argv: An array of command-line argument strings.
- * Return: 0 upon successful execution.
- */
-int main(int argc, char *argv[]) {
-	Py_Initialize();
-	// Define your Python objects and call the functions here.
-	Py_Finalize();
-	return 0;
-}
-
