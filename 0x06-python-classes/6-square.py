@@ -30,46 +30,33 @@ class Square:
     """Defines the blueprint of a square.
 
     Attribute:
-        size: An integer indicating the size of the square object.
+        size (int): An integer representing the object size.
+        position (int, int): The position of the new square.
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        """An object constructor method.
-
-        Initiatilizes Square with size.
-
-        Arg:
-            size: A integer representing object size.
-                  Has a default value of 0.
-            position: A position definer
-
-        """
+        """An object constructor method."""
         self.__size = size
         self.__position = position
 
     @property
     def size(self):
-        """
-        Getter method for size.
+        """Gets the size private attribute value.
+
         Returns:
-            int: The size of the square.
+            The size private attribute
         """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Sets the size private attribute value.
+
+        Validates the assignment of the size private attribute.
+
+        Arg:
+            value: the value to be set
         """
-        Setter method for size.
-
-        Args:
-            value (int): The size to set.
-
-        Raises:
-            ValueError: If value is not a positive integer.
-            TypeError: if value is not an integer.
-
-        """
-
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -78,27 +65,22 @@ class Square:
 
     @property
     def position(self):
-        """
-        Getter method for position.
+        """Gets the position private attribute value.
+
         Returns:
-            int: To retrieve position value.
+            The position private attribute
         """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """Sets the position private attribute value.
+
+        Validates the assignment of the position private attribute.
+
+        Arg:
+            value: the value to be set
         """
-        Setter method for position.
-
-        Args:
-            value (tuple): The size to set.
-
-        Raises:
-            TypeError: position must be a tuple of 2 positive integers
-
-        """
-        v = value
-
         if (
             not isinstance(value, tuple)
             or len(value) != 2
@@ -106,15 +88,18 @@ class Square:
             or not all(num >= 0 for num in value)
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
-
         self.__position = value
 
+    def area(self):
+        """A public object method.
+
+        Returns:
+            The current square area
+        """
+        return self.__size**2
+
     def my_print(self):
-        """
-        my_print:
-            it print out the square with # character.
-            if my __size == 0 print an empty line.
-        """
+        """Displays the square object with # character"""
         if self.__size == 0:
             print("")
             return
@@ -124,9 +109,3 @@ class Square:
             [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
             print("")
-
-    def area(self):
-        """
-        This method returns the current square area
-        """
-        return self.__size ** 2
