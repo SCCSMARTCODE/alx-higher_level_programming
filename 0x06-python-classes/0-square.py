@@ -2,7 +2,7 @@
 
 """Square Class
 
-This module defines a simple Square class that can be used to 
+This module defines a simple Square class that can be used to
 represent squares in your Python programs.
 
 Usage Example:
