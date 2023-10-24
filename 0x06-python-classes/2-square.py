@@ -21,6 +21,8 @@ The Square class is a basic blueprint for creating square objects.
 providing a foundation for further customization and use in your projects.
 The example demonstrates how to create an instance
 of the Square class and inspect its type and dictionary.
+
+Feel free to modify and expand upon this class to suit your specific needs.
 """
 
 
