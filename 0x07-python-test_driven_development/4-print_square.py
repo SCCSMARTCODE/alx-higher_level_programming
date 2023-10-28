@@ -17,6 +17,8 @@ tests:
         print(e)
     print("")
 """
+
+
 def print_square(size):
     """
     print_square - print a square of length - > size
@@ -28,7 +30,7 @@ def print_square(size):
     i = 0
     j = 0
 
-    if  not isinstance(size, int):
+    if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")

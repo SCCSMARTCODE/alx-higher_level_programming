@@ -7,6 +7,7 @@ text_indentation = __import__('5-text_indentation').text_indentation
 text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ")
 """
 
+
 def text_indentation(text):
     """
     this function prints text and replace ['.', '?', ':'] with newline

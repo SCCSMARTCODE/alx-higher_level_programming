@@ -7,6 +7,7 @@
         print(matrix)
 """
 
+
 def matrix_divided(matrix, div):
     """
     This function divides a matrix of the same len(row)
