@@ -1,0 +1,47 @@
+The testing module
+------------------------------
+
+making use of func: 'add_integer'
+=======================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1
+True
+
+>>> f = __import__("0-add_integer").add_integer.__doc__
+>>> len(f) > 1
+True
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer('we', 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(2, 'we')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(0)
+98
+
+>>> add_integer(2.4, 3)
+5
+
+>>> add_integer(5, 20.9)
+25
+
+>>> add_integer("lol")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> [add_integer(i, i ** 2) for i in range(6)]
+[0, 2, 6, 12, 20, 30]
+
+>>> add_integer(-197)
+-99
