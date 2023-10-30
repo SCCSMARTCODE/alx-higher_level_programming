@@ -1,9 +1,26 @@
 #!/usr/bin/python3
-"""this is a rectangle module"""
+"""this is a rectangle module
+Usage in code:
+    my_rectangle = Rectangle(2, 4)
+    print(my_rectangle.__dict__)
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(my_rectangle.__dict__)
+
+"""
 
 
 class Rectangle:
-    """rectangle class"""
+    """rectangle class:
+        this is a blue print for rectangle classes of all cases
+
+        Attribute:
+            width: An integer indicating the width of the rectangle object.
+            height: An integer indicating the height of the rectangle object.
+
+
+    """
     def __init__(self, width=0, height=0):
         """this is the class initializer"""
 
