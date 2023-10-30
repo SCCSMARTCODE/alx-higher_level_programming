@@ -19,60 +19,61 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """An object constructor method.
-
-        Initiatilizes Rectangle with width and height.
+        """Class constructor to initialize the Rectangle object.
 
         Args:
-            width: An integer representing object width.
-                  Has a default value of 0.
-            height: An integer representing object height.
-                  Has a default value of 0.
+            width (int): The width of the rectangle (default is 0).
+            height (int): The height of the rectangle (default is 0).
         """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
-        """Gets the width private attribute value.
+        """Getter method for the width attribute.
 
         Returns:
-            The width private attribute
+            int: The width of the rectangle.
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width private attribute value.
+        """Setter method for the width attribute.
 
-        Validates the assignment of the width private attribute.
+        Args:
+            value (int): The new width value.
 
-        Arg:
-            value: the value to be set
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0 (negative).
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
+
         self.__width = value
 
     @property
     def height(self):
-        """Gets the height private attribute value.
+        """Getter method for the height attribute.
 
         Returns:
-            The height private attribute
+            int: The height of the rectangle.
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height private attribute value.
+        """Setter method for the height attribute.
 
-        Validates the assignment of the height private attribute.
+        Args:
+            value (int): The new height value.
 
-        Arg:
-            value: the value to be set
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0 (negative).
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
