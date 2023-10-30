@@ -119,4 +119,4 @@ class Rectangle:
             for j in range(self.__width):
                 make += '#'
             make += '\n'
-        return make
+        return make[:-1]
