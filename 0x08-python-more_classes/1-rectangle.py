@@ -12,46 +12,70 @@ Usage in code:
 
 
 class Rectangle:
-    """rectangle class:
-        this is a blue print for rectangle classes of all cases
+    """Rectangle class:
+    This is a blueprint for rectangle objects of various dimensions.
 
-        Attribute:
-            width: An integer indicating the width of the rectangle object.
-            height: An integer indicating the height of the rectangle object.
-
-
+    Attributes:
+        width (int): An integer indicating the width of the rectangle object.
+        height (int): An integer indicating the height of the rectangle object.
     """
     def __init__(self, width=0, height=0):
-        """this is the class initializer"""
+        """Class constructor to initialize the Rectangle object.
 
+        Args:
+            width (int): The width of the rectangle (default is 0).
+            height (int): The height of the rectangle (default is 0).
+        """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
-        """the width getter"""
+        """Getter method for the width attribute.
 
+        Returns:
+            int: The width of the rectangle.
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """the width setter"""
+        """Setter method for the width attribute.
 
+        Args:
+            value (int): The new width value.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0 (negative).
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0@property")
+            raise ValueError("width must be >= 0")
 
         self.__width = value
 
     @property
     def height(self):
-        """The height getter"""
+        """Getter method for the height attribute.
+
+        Returns:
+            int: The height of the rectangle.
+        """
         return self.__height
 
     @height.setter
-    """the height setter"""
     def height(self, value):
+        """Setter method for the height attribute.
+
+        Args:
+            value (int): The new height value.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0 (negative).
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
