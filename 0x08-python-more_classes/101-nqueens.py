@@ -6,6 +6,7 @@ This is a module thatb solve the:
 
 from sys import argv
 
+
 def solve_nqueens(n):
     def is_safe(board, row, col):
         for i in range(col):
@@ -21,7 +22,7 @@ def solve_nqueens(n):
 
     def solve(board, col):
         if col >= n:
-            solutions.append([[i, row.index(1)] for i, row in enumerate(board)])
+            sos.append([[i, row.index(1)] for i, row in enumerate(board)])
             return
         for i in range(n):
             if is_safe(board, i, col):
@@ -29,10 +30,11 @@ def solve_nqueens(n):
                 solve(board, col + 1)
                 board[i][col] = 0
 
-    solutions = []
+    sos = []
     board = [[0 for _ in range(n)] for _ in range(n)]
     solve(board, 0)
-    return solutions
+    return sos
+
 
 if __name__ == "__main__":
     if len(argv) != 2:
@@ -43,8 +45,8 @@ if __name__ == "__main__":
         if n < 4:
             print("N must be at least 4")
             exit(1)
-        solutions = solve_nqueens(n)
-        for solution in solutions:
+        sos = solve_nqueens(n)
+        for solution in sos:
             print(solution)
     except ValueError:
         print("N must be a number")
