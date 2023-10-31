@@ -14,10 +14,12 @@ print(new_list)
 
 print(new_list == my_list)
 """
-def copy_list(l):
+
+
+def copy_list(no):
     """Working on
         the copy_list_function
     Return:
-        l[:]
+        the copy of
     """
-    return l[:]
+    return no[:]
