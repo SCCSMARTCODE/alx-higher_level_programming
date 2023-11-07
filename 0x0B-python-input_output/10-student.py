@@ -18,7 +18,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Retrieves a dictionary representation
-        
+
         Returns: the dict representation of the instance.
         """
 
