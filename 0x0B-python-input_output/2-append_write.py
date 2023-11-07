@@ -4,7 +4,7 @@
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """This module Write a function that appends a string
             to a text file (UTF8)
         Return:
