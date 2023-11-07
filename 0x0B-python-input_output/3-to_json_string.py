@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module 
+"""This module
     Write a function that returns the JSON
 """
 import json
@@ -11,4 +11,4 @@ def to_json_string(my_obj):
         - my_obj: string to represent
     Returns: JSON representation
     """
-    return json.dumbs(my_obj)
+    return json.dumps(my_obj)
