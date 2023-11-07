@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""This module contains 
-     a function that writes a string to a text file (UTF8) 
+"""This module contains
+     a function that writes a string to a text file (UTF8)
 """
 
 
