@@ -103,6 +103,7 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes list_objs in CSV format
@@ -137,7 +138,7 @@ class Base:
         """
 
         filename = cls.__name__ + ".csv"
-        l = []
+        lo = []
         if os.path.exists(filename):
             with open(filename, 'r') as f:
                 reader = csv.reader(f, delimiter=',')
@@ -151,8 +152,8 @@ class Base:
                         for j, e in enumerate(row):
                             if e:
                                 setattr(i, fields[j], int(e))
-                        l.append(i)
-        return l
+                        lo.append(i)
+        return lo
 
     @staticmethod
     def draw(list_rectangles, list_squares):
