@@ -13,10 +13,10 @@ class Square(Rectangle):
     """
     def __init__(self, size, x=0, y=0, id=None):
         """
-        :param size: 
-        :param x: 
-        :param y: 
-        :param id: 
+        :param size:
+        :param x:
+        :param y:
+        :param id:
         """
         self.size = size
         super().__init__(size, size, x, y, id)
@@ -25,7 +25,13 @@ class Square(Rectangle):
         """
         :return: ___
         """
-        return "[{}] ({}) {}/{} - {}".format("Square", self.id, self.x, self.y, self.size)
+        return "[{}] ({}) {}/{} - {}".format(
+                "Square",
+                self.id,
+                self.x,
+                self.y,
+                self.size
+            )
 
     @property
     def size(self):
@@ -37,7 +43,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, val):
         """
-        :param val: 
+        :param val:
         :return: ___
         """
         if type(val) is not int:
@@ -50,8 +56,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        :param args: 
-        :param kwargs: 
+        :param args:
+        :param kwargs:
         :return: ___
         """
         attribute_names = ["id", "size", "x", "y"]

@@ -167,7 +167,14 @@ class Rectangle(Base):
         """
         :return: [{}] ({}) {}/{} - {}/{}
         """
-        return "[{}] ({}) {}/{} - {}/{}".format("Rectangle", self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+                "Rectangle",
+                self.id,
+                self.__x,
+                self.__y,
+                self.__width,
+                self.__height
+            )
 
     def to_dictionary(self):
         """

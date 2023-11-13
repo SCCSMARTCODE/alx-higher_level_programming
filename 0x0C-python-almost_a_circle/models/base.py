@@ -26,9 +26,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        
-        :param list_dictionaries: 
-        :return: 
+
+        :param list_dictionaries:
+        :return:
                     []
                     json.dumps(list_dictionaries)
         """
