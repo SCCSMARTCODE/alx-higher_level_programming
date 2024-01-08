@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Prompt for commit message
+read -p "Input your commit message: " message
+
+# Add all changes to the git index
 git add .
-echo "Input your commit message"
-read message
-git commit -m "$(message)"
+
+# Commit changes with the provided message
+git commit -m "$message"
+
+# Push changes to the remote repository
 git push
