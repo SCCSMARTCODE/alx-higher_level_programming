@@ -12,10 +12,9 @@ if __name__ == "__main__":
             sys.argv[2], sys.argv[1])
 
     r = requests.get(url)
-    commits = r.json()
+    comm = r.json()
     try:
         for i in range(10):
-            print(f"{commits[i]['sha']}: /
-                    {commits[i]['commit']['author']['name']}")
+            print(f"{comm[i]['sha']}: {comm[i]['commit']['author']['name']}")
     except IndexError:
         pass
