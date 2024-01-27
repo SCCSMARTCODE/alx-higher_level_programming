@@ -10,7 +10,7 @@ if __name__ == "__main__":
     # Get the arguments, arg1: repo name, arg2: repo owner
     url = "https://api.github.com/repos/{}/{}/commits".format(
             sys.argv[2], sys.argv[1])
-    
+
     r = requests.get(url)
     commits = r.json()
     try:
